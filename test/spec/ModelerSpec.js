@@ -19,7 +19,7 @@ describe('Modeler', function() {
     container = TestContainer.get(this);
   });
 
-  afterEach(function() {
+  false && afterEach(function() {
     if (modeler) {
       modeler.destroy();
     }
@@ -42,7 +42,7 @@ describe('Modeler', function() {
   }
 
 
-  it('should import simple process', function(done) {
+  it.only('should import simple process', function(done) {
     var xml = require('../fixtures/bpmn/simple.bpmn');
     createModeler(xml, done);
   });
